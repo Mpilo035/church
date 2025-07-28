@@ -1,0 +1,102 @@
+/* Fullscreen Background Image */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('CSE-aa.jpg'); /* Make sure this image is in the same folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Profile Picture */
+.profile-pic {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 140px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Section Styling */
+.centered-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #00bfff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.nav-menu a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: block;
+}

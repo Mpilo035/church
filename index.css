@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --church-blue: hsl(195, 100%, 50%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/33145642/pexels-photo-33145642.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+  }
+}
+
+/* Profile Picture */
+.profile-pic {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Header Styling */
+.church-header {
+  text-align: center;
+  padding: 140px 20px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Section Styling */
+.centered-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--church-blue);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: right;
+  z-index: 998;
+}
+
+.nav-menu a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+  color: var(--church-blue);
+}
+
+.nav-menu.show {
+  display: block;
+}
+
+/* Service Cards */
+.service-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ministry Cards */
+.ministry-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px 0;
+  border-left: 4px solid var(--church-blue);
+}
+
+/* Event Cards */
+.event-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+}
+
+/* Form Inputs */
+.form-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 12px;
+  color: white;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--church-blue);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--church-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: hsl(195, 100%, 40%);
+}
+
+/* Leadership Cards */
+.leadership-card {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+}
+
+.leadership-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid var(--church-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  .church-header {
+    padding: 100px 15px 15px;
+    margin: 15px;
+  }
+  
+  .centered-section {
+    margin: 15px;
+    padding: 15px;
+  }
+}
